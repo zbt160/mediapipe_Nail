@@ -324,6 +324,7 @@ class SolutionBase:
           {'video_in' : cv2.imread('/tmp/hand1.png')[:, :, ::-1]})
       print(results.hand_landmarks)
     """
+    print("INSIDE PROCESS")
     self._graph_outputs.clear()
 
     if isinstance(input_data, np.ndarray):

@@ -36,7 +36,8 @@ from mediapipe.calculators.util import non_max_suppression_calculator_pb2
 from mediapipe.calculators.util import rect_transformation_calculator_pb2
 from mediapipe.calculators.util import thresholding_calculator_pb2
 # pylint: enable=unused-import
-from mediapipe.python.solution_base import SolutionBase
+# from mediapipe.python.solution_base import SolutionBase
+from solution_base import SolutionBase
 # pylint: disable=unused-import
 from mediapipe.python.solutions.hands_connections import HAND_CONNECTIONS
 # pylint: enable=unused-import
@@ -149,5 +150,5 @@ class Hands(SolutionBase):
         3) a "multi_handedness" field that contains the handedness (left v.s.
            right hand) of the detected hand.
     """
-
+    print("INSIDE HAND_PROCESS")
     return super().process(input_data={'image': image})
